@@ -4,9 +4,11 @@ The old Vercel address of the AlienMind site, `https://www-alienmind.vercel.app`
 sends visitors to `https://www.alienmind.eu`, keeping the path (for example
 `/strdltn/index.html`).
 
-- `index.html` redirects with JavaScript (`location.replace`), with a meta refresh to the home
+- `public/index.html` redirects with JavaScript (`location.replace`), with a meta refresh to the home
   page when JavaScript is off.
-- `vercel.json` serves `index.html` for every path, so old deep links redirect too.
+- `vercel.json` serves `index.html` for every path, so old deep links redirect too. It also
+  turns off the framework, install and build steps, which the Vercel project still had set up
+  for the old Vite site.
 
 Deployed by the Vercel project `www-alienmind` from `main`. The site itself lives in
 [alienmind-www-public](https://github.com/alienmind/alienmind-www-public) and runs on
